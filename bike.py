@@ -17,6 +17,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     print("would you like to see data for Chicago, New York, or Washington?")
 
@@ -59,7 +60,7 @@ def get_filters():
         Month = 'all'
         Day = 'all'
 
-        #When the period_filters choosen are for both
+    #When the period_filters choosen are for both
     elif period_filters == 'both' or '3':
         while True:
             choosen_month = str(input('Get the filters for the month of?: ')).title()
@@ -69,7 +70,7 @@ def get_filters():
             else:
                 print ('The choosen month is out of range')
 
-# For day period filters
+        # For day period filters
         while True:
             choosen_day = str(input('name of the day of week to filter by, or "all" to apply no day filter:')).title()
             if choosen_day == 'Monday':
@@ -96,8 +97,8 @@ def get_filters():
         while True:
             choosen_month = str(input('Get the filters for the month of?: ')).title()
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-        #input filtering
+            # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+           #input filtering
             if choosen_month in Months:
                 Month = choosen_month
                 Day = 'all'
@@ -176,7 +177,7 @@ def time_stats(df):
         print(f"The most frequent Month is: {freq_month}")
 
     # TO DO: display the most common day of week
-# DOW filters where applicable
+    # DOW filters where applicable
     if Day == 'all':
         freq_day = df['dow'].mode()[0]
         print(f"The most frequent  day is: {freq_day}")
