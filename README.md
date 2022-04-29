@@ -18,7 +18,7 @@ Now, this project seeks to examine the data given by Motivate and provide signif
 3. washington.csv
 4. bikeshare.py 
 
-###Data set
+### Data set
 The data used in this project were selected randomly for the first six months period in year 2017. These data are provided for all three cities of interest i.e Chicago, New york and Washington city.
 
 ### Credits
