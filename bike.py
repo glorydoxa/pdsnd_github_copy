@@ -63,30 +63,30 @@ def get_filters():
     #When the period_filters choosen are for both
     elif period_filters == 'both' or '3':
         while True:
-            choosen_month = str(input('Get the filters for the month of?: ')).title()
-            if choosen_month in Months:
-                Month = choosen_month
+            month_choosen = str(input('Get the filters for the month of?: ')).title()
+            if month_choosen in Months:
+                Month = month_choosen
                 break
             else:
                 print ('The choosen month is out of range')
 
         # For day period filters
         while True:
-            choosen_day = str(input('name of the day of week to filter by, or "all" to apply no day filter:')).title()
-            if choosen_day == 'Monday':
-                choosen_day = DOW[0]
-            elif choosen_day == 'Tuesday':
-                choosen_day = DOW[1]
-            elif choosen_day == 'Wednesday':
-                choosen_day = DOW[2]
-            elif choosen_day == 'Thursday':
-                choosen_day = DOW[3]
-            elif choosen_day =='Friday':
-                choosen_day = DOW[4]
-            elif choosen_day == 'Saturday':
-                choosen_day = DOW[5]
-            elif choosen_day == 'Sunday':
-                choosen_day = DOW[6]
+            day_choosen = str(input('name of the day of week to filter by, or "all" to apply no day filter:')).title()
+            if day_choosen == 'Monday':
+                day_choosen = DOW[0]
+            elif day_choosen == 'Tuesday':
+                day_choosen = DOW[1]
+            elif day_choosen == 'Wednesday':
+                day_choosen = DOW[2]
+            elif day_choosen == 'Thursday':
+                day_choosen = DOW[3]
+            elif day_choosen =='Friday':
+                day_choosen = DOW[4]
+            elif day_choosen == 'Saturday':
+                day_choosen = DOW[5]
+            elif day_choosen == 'Sunday':
+                day_choosen = DOW[6]
                 break
             else:
                 print('The day choosen is out of range')
@@ -95,17 +95,17 @@ def get_filters():
     #for only month period  filters
     elif period_filters == 'month' or '1':
         while True:
-            choosen_month = str(input('Get the filters for the month of?: ')).title()
+            month_choosen = str(input('Get the filters for the month of?: ')).title()
 
             # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
            #input filtering
-            if choosen_month in Months:
-                Month = choosen_month
+            if month_choosen in Months:
+                Month = month_choosen
                 Day = 'all'
                 break
             else:
                 print(
-                    f"'{choosen_month}' is out of range. Please try again.\n")
+                    f"'{month_choosen}' is out of range. Please try again.\n")
 
 
     elif time_filter == '2' or period_filters == 'Day':
@@ -114,8 +114,8 @@ def get_filters():
                 "\nWhich day?\nType a day name: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]\n> ").strip().lower()
 
             # Input filtering
-            if choosen_day in DOW:
-                Day = choosen_day
+            if day_choosen in DOW:
+                Day = day_choosen
                 Month = 'all'
 
                 break
