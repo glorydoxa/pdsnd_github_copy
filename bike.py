@@ -122,7 +122,7 @@ def get_filters():
             else:
                 print(
                     f"'{day_selection}' is out of range. Please try again.\n")
-    print('-'*60)
+    print('-'*40)
     return city_choice, Month, Day
 
 values_filtered = get_filters()
@@ -190,7 +190,7 @@ def time_stats(df):
     print(f"the most frequent Start Hour is: {freq_hour}")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*40)
 
 time_stats(df)
 
@@ -215,7 +215,7 @@ def station_stats(df):
         f"The most frequent use of both start station & end station trip is: {freq_route}\n")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*40)
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
